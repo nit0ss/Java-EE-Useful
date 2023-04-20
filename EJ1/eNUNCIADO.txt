@@ -1,0 +1,23 @@
+
+==========================================Ejercicio CuentA 
+
+Crear una clase que permita crear cuentas bancarias. La clase ha de tener los siguientes requisitos:
+•	Nombre: CCC.
+•	Tendrá las siguientes propiedades:
+o	saldoDeCuenta, de tipo double.
+o	nombreDelTitular, de tipo String.
+o	numeroDeCuenta, de tipo long.
+•	Constructor de la clase con dos parámetros:
+o	nombreDelTitular, de tipo String.
+o	saldoDeCuenta, de tipo double.
+•	Métodos de la clase:
+o	Se crearán dos setters, uno para hacer ingresos (setIngreso) y otro para hacer reintegros (setReintegro). Se crearán en un objeto de tipo CCC.
+o	Se crearán dos getters, uno permitirá obtener el saldo (getSaldoCuenta) de la cuenta corriente y el otro obtendrá los datos generales (getDatosCuenta) de una CCC.
+o	Se creará un método (RealizarTransferenciaEntreCuentas) para permitir realizar transferencias de dinero de una cuenta a otra (de una CCC a otra).
+El constructor de la clase CCC será el encargado de establecer:
+•	Un nombre para el titular de la cuenta corriente
+•	Un saldo inicial para la cuenta corriente.
+•	Asignará un número de cuenta corriente, de tipo long, de forma aleatoria.
+La clase CCC se creará en una clase principal llamada OperacionesBanco. En esta clase principal OperacionesBanco se crearán dos instancias de la clase CCC, con el nombre CCC11 y CCC2.
+Para probar la correcta creación de los métodos de CCC, se realizará una transferencia desde la CCC1 a la CCC2. Se mostrarán todos los datos de ambas cuentas CCC1 y CCC2 para comprobar cómo han quedado.
+

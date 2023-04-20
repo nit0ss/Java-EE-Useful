@@ -1,0 +1,11 @@
+nombreBD: bdempleados
+nombre tabla: empleados
+id: integer
+nombre: varchar(15)
+apellido1: varchar(20)
+apellido2: varchar(20)
+fechanacimiento: date
+salario: float()
+Realizar las operaciones CRUD para recuperar datos, insertar un registro con id=500 y salario 3000, actualizar el salario del empleado con id=500
+a 31000 y luego eliminar
+el registro del empleado con id=500.
