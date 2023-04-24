@@ -7,13 +7,10 @@
 <title>Error JSP</title>
 </head>
 <body>
-
-	<%
-	String usuario = request.getParameter("usuario");
-	String pwd = request.getParameter("password");
-	%>
-
-<h1>La combinacion <%=usuario%> y <%=pwd %>!</h1>
-
+<%
+String usuario = request.getParameter("usuario");
+String pwd = request.getParameter("pwd");
+%>
+<h1>La combinación usuario <%=usuario %> y contraseña <%=pwd %> no es correcta.</h1>
 </body>
 </html>
