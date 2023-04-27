@@ -2,6 +2,7 @@ package es.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +15,7 @@ public class Libro {
 	private int precio;
 	private String autor;
 	private String titulo;
+	
 
 	public Libro() {
 		super();
