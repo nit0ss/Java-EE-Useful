@@ -1,0 +1,13 @@
+Crear una base de datos que almacene la siguiente información sobre películas:
+código, título, director y precio. 
+Insertar 10 registros cumpliendo al menos las siguientes condiciones (para que tengamos registros que satisfagan las consultas que habra que realizar posteriormente)
+Los directores que tiene que aparecer obligatoriamente al menos una vez son: Eva, Ana yMiguel.
+ Al menos el precio de tres películas debe estar comprendido entre 7 y 45.
+
+Todas las películas
+Las peliculas de los directores cuyo nombre empiece por M
+Las peliculas de las directoras cuyo nombre sea Eva
+Las películas cuyo precio sea mayor que 10 y menor que 45
+Las películas de los directores Ana o Miguel
+Los directores de las películas
+
