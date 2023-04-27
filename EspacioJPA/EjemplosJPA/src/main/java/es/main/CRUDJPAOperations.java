@@ -11,15 +11,14 @@ import es.model.Libro;
 
 public class CRUDJPAOperations {
 
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("biblioPersistence");
+	static EntityManagerFactory emf = Persistence.createEntityManagerFactory("biblioPersistence");
+	static EntityManager em = emf.createEntityManager();
+	static Libro l1 = null;
 
-	EntityManager em = emf.createEntityManager();
-
-	Libro l1 = null;
-
-	public void updateLibro(String isbn, String newName, String newAutor, int newPrecio) {
+	public static void updateLibro(String isbn, String newName, String newAutor, int newPrecio) {
 
 		try {
+
 			l1 = em.find(Libro.class, isbn);
 			l1.setAutor(newAutor);
 			l1.setPrecio(newPrecio);
@@ -38,7 +37,7 @@ public class CRUDJPAOperations {
 
 	}
 
-	public void deleteLibro(String isbn) {
+	public static void deleteLibro(String isbn) {
 
 		try {
 			l1 = em.find(Libro.class, isbn);
@@ -52,7 +51,7 @@ public class CRUDJPAOperations {
 
 	}
 
-	public void findLibro(String isbn) {
+	public static void findLibro(String isbn) {
 
 		try {
 			l1 = em.find(Libro.class, "1A");
@@ -64,7 +63,7 @@ public class CRUDJPAOperations {
 		}
 	}
 
-	public void insertLibro(String isbn, String newName, String newAutor, int newPrecio) {
+	public static void insertLibro(String isbn, String newName, String newAutor, int newPrecio) {
 
 		try {
 
@@ -83,22 +82,51 @@ public class CRUDJPAOperations {
 
 	}
 
-	public void queryAutorPrecio(String autor, String precio) {
+	public static void queryLibroConAutorYPrecio(String autor, int precio) {
+
 		// ej "select l from Libro l"
 		// select l from Libro l where l.autor=:autor
+		// equivalente a anidado where l.autor in ('federico')
 		try {
-			TypedQuery<Libro> consulta = em
-					.createQuery("select l from Libro l where l.autor:=autor and l.precio>:precio", Libro.class);
+			TypedQuery<Libro> consulta = em.createQuery("select l from Libro l where l.autor=:autor and l.precio > :precio", Libro.class);
 			consulta.setParameter("autor", autor);
 			consulta.setParameter("precio", precio);
 
+			System.out.println("Buscando libros de " + autor + " con precio mayor a " + precio);
+
 			List<Libro> lista = consulta.getResultList();
+			
+			
 			for (Libro l : lista) {
-				l.toString();
+				System.out.println(l.toString());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+	public static void queryStringConAutor(String autor) {
+
+		TypedQuery<String> consulta = em.createQuery("select l.titulo from Libro l where l.autor =:autor", String.class);
+		consulta.setParameter("autor", autor);
+
+		List<String> lista = consulta.getResultList();
+		for (String s : lista) {
+			System.out.println(s);
+		}
+
+	}
+
+	public static void listaPrecios() {
+		TypedQuery<Object[]> consulta = em.createQuery("select count(l.precio), l.precio from Libro l group by l.precio", Object[].class);
+	
+
+		List<Object[]> lista = consulta.getResultList();
+		for (Object[] sublista:lista) {
+			System.out.println("De " + sublista[1] + "€ hay " + sublista[0] + " libros. Ref:" + lista.toString());
+		}
+		
+		
+	}
+	
 }
