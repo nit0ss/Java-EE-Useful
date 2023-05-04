@@ -2372,3 +2372,8 @@ Caused by: java.lang.Exception: The resource tree is locked for modifications.
 2023-05-04 18:14:01,495 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2023-05-04 18:14:01,538 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-05-04 18:14:01,561 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-05-04 21:00:14,764 [Worker-33: Launching Main (1)] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EjemplosJPA: com.curso:EjemplosJPA:0.0.1-SNAPSHOT with classifier null to /EjemplosJPA/target/classes
+2023-05-04 21:00:14,787 [Worker-33: Launching Main (1)] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EjemplosJPA: com.curso:EjemplosJPA:0.0.1-SNAPSHOT with classifier null to /EjemplosJPA/target/classes
+2023-05-04 21:00:14,812 [Worker-33: Launching Main (1)] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/EjemplosJPA: com.curso:EjemplosJPA:0.0.1-SNAPSHOT with classifier null to /EjemplosJPA/target/classes
+2023-05-04 21:03:58,956 [Worker-88: https://download.jboss.org/jbosstools/static/photon/stable/updates/core/4.27.0.Final/plugins/org.fusesource.ide.catalogs_11.18.0.v20221222-1256.jar] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.jboss.org:443
+2023-05-04 21:04:13,064 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
