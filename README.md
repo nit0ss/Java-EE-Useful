@@ -1,2 +1,3 @@
-# Ejercicios_JavaEE
- Ejercicios Java EE Curso
+# Java EE Implementations
+ 
+# Implementations of Servlets, JSP, ServletContext, JPA, JSF, hibernate
